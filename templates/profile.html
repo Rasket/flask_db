@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Заголовк</title>
+</head>
+<body>
+	<h1>{{user.username}}</h1>
+	<h1>{{user.password}}</h1>
+	{% if user.file == None %}
+		<h3>Error</h3>
+		<img src="{{url_for('static', filename = 'alt.jpg')}}" alt = "Error" width="128" height="128">
+	{% else %}
+		<img src="data:;base64,{{ image }}" alt = "Error" width="128" height="128">
+	{% endif %}
+</body>
+</html>
